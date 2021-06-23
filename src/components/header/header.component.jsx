@@ -21,10 +21,8 @@ const Header = ({currentUser}) => (
                 CONTACT
             </Link>
             {
-                currentUser ?
-                <div className='option' onClick={() => auth.signOut()}>SIGN OUT</div>
-                :
-                <Link className='option' to='/signin'>SIGN IN</Link>
+                //auth.signOut() function from google firebase signs the user out
+                currentUser ? <div className='option' onClick={() => auth.signOut()}>SIGN OUT</div> : <Link className='option' to='/signin'>SIGN IN</Link>
             }
         </div>
     </div>
